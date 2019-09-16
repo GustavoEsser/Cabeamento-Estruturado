@@ -1,5 +1,5 @@
 # Cabeamento Estruturado
-![preview](http://databel.com.br/wp-content/uploads/2017/04/Fotolia_91890492_Subscription_Monthly_M-e1491519517995-1024x420.jpg)
+![preview](https://ticamp.com.br/wp-content/uploads/2017/12/Cabeamento-estruturado-para-pequenas-empresas-com-a-TICAMP.jpg)
 
 <hr/> 
 
