@@ -3,5 +3,7 @@
 ![Stage](https://img.shields.io/badge/release-Stable-blue.svg)
 ![OS Linux](https://img.shields.io/badge/Supported%20OS-Linux-yellow.svg)
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Utfpr.gif" width=200 alt="AWX" />
+
 # Cabeamento Estruturado
-![preview](https://seteltecnologia.com.br/wp-content/uploads/2016/02/FUNDO-BANNER-1.jpg)width="500"
+![preview](https://seteltecnologia.com.br/wp-content/uploads/2016/02/FUNDO-BANNER-1.jpg)
