@@ -1,0 +1,86 @@
+This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=luatex 2019.12.9)  9 DEC 2019 13:05
+ restricted system commands enabled.
+**"C:/Users/Gustavo Esser/Dropbox/UTFPR - Pós Redes de Computadores/Matérias/
+Cabeamento Estruturado/Projeto/Cabeamento-Estruturado/Modelo/referencias.bib"
+
+("C:/Users/Gustavo Esser/Dropbox/UTFPR - Pós Redes de Computadores/Matérias/C
+abeamento Estruturado/Projeto/Cabeamento-Estruturado/Modelo/referencias.bib"
+Overfull \hbox (217.02448pt too wide) in paragraph at lines 1--9
+[]\tenrm @bookross2007cabea-mento, ti-tle=Cabea-mento Es-tru-tu-rado, au-thor=R
+oss, J., isbn=9788570361479, url=https://books.google.com.br/books?id=7DQdyi-|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x20.0, direction TLT
+.\tenrm @
+.\tenrm b
+.\kern0.27779 (font)
+.etc.
+
+
+Overfull \hbox (5.10707pt too wide) in paragraph at lines 17--23
+[]\tenrm @bookkurose2010, ti-tle=Re-des de Com-puta-dores ea In-ter-net: uma ab
+or-dagem top-down, au-thor=Kurose,|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x20.0, direction TLT
+.\tenrm @
+.\tenrm b
+.\kern0.27779 (font)
+.etc.
+
+
+Overfull \hbox (0.57803pt too wide) in paragraph at lines 24--36
+\tenrm nal=IEEE Net-work, ti-tle=Re-search chal-lenges for traf-fic en-gi-neer-
+ing in soft-ware de-fined net-works, year=2016,|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0, direction TLT
+.\tenrm n
+.\tenrm a
+.\tenrm l
+.\tenrm =
+.\tenrm I
+.etc.
+
+
+Overfull \hbox (0.46599pt too wide) in paragraph at lines 24--36
+\tenrm ing;ATM;IP net-works;MPLS net-work;SDN;data for-ward-ing plane;fault tol
+-er-ance;flow man-age-ment;novel traf-|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0, direction TLT
+.\tenrm i
+.\tenrm n
+.\tenrm g
+.\tenrm ;
+.\tenrm A
+.etc.
+
+
+Overfull \hbox (8.27371pt too wide) in paragraph at lines 24--36
+\tenrm fic en-gi-neer-ing so-lu-tions;soft-ware de-fined net-works;topol-ogy up
+-date;traf-fic anal-y-sis;Com-puter ar-chi-tec-ture;Con-|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0, direction TLT
+.\tenrm  (ligature fi)
+.\tenrm c
+.\glue(\spaceskip) 3.33333 plus 1.66666 minus 1.11111
+.\tenrm e
+.\tenrm n
+.etc.
+
+)
+! Emergency stop.
+<*> ...Cabeamento-Estruturado/Modelo/referencias.bib"
+                                                  
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!

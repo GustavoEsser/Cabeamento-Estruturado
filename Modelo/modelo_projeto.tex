@@ -24,6 +24,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
+\usepackage{float}
 \addto\captionsenglish{%
 	\renewcommand\tablename{Tabela}
 	\renewcommand\figurename{Figura}
@@ -60,7 +61,7 @@
 %% ====================================
 %% ====================================
 
-\lfoot{\footnotesize \texttt{Cabeamento estruturado} \textbullet ~Modelo de projeto}
+\lfoot{\footnotesize \texttt{Cabeamento estruturado} \textbullet ~Projeto - Fly Security}
 
 
 \cfoot{}
@@ -74,7 +75,7 @@
 \usepackage{lettrine}
 \newcommand{\initial}[1]{%
      \lettrine[lines=3,lhang=0.3,nindent=0em]{
-     				\color{DarkGoldenrod}
+     				\color{Black}
      				{\textsf{#1}}}{}}
 
 
@@ -87,7 +88,7 @@
 										}
 
 \pretitle{\vspace{-30pt} \begin{flushleft} \HorRule 
-				\fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont 
+				\fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{Black} \selectfont 
 				}
 
 %% ====================================
@@ -96,7 +97,7 @@
 %% ====================================
 %% ====================================
 
-\title{Modelo para Projeto de cabeamento estruturado}					% Title of your article goes here
+\title{Cabeamento Estruturado para escritório de consultoria}					% Title of your article goes here
 
 %% ====================================
 
@@ -105,8 +106,8 @@
 \posttitle{\par\end{flushleft}\vskip 0.5em}
 
 \preauthor{\begin{flushleft}
-					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
-\author{Alexandre L'Erario, Fulano de Tal }  	% Author name goes here
+					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkBlue}}
+\author{Ansley Donizetti, Gustavo Henrique Esser}  	% Author name goes here
 
 
 \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
@@ -134,10 +135,7 @@
 %% ====================================
 %% ====================================
 
-\initial{E}\textbf{ste modelo exemplifica como um projeto de cabeamento estruturado deve ser elaborado. No projeto real,
-	esta seção deve indicar qual seria o propósito do projeto: reestruturar, criar uma estrura sem uma anterior, apresentar uma estrutura ficticia ou real  etc. Deve também conter sua cobertura (quais elementos este projeto aborda): Levantamento da planta física, Elaboração da planta lógica, Equipamentos passivos da rede (memorial descritivo), Levantamento de quantidade/custo, Plano de Certificação e orçamento.
-	No caso de projetos reais, deve conter também o escopo. No projeto real deve conter quais as atividades serão executadas e quais os responsáveis. Deve apresentar também as restrições que serão cumpridas e um possível acordo de nível de serviço (SLA).
-	O resumo pode ser descrito no formato texto ou em forma de um mapa mental/conceitual conforme figura \ref{fig4}.}
+\initial{E}\textbf{ste projeto tem como objetivo implementar uma solução de cabeamento estruturado do zero para um dos escritórios da empresa Fly Security Offensive que funciona como um centro de consultoria e treinamento, abordaremos neste projeto toda a parte de cabeamento estruturado partindo do backbone de rede ate chegar a mesa dos colaboradores da empresa. O principal objetivo é padronizar a instalação de cabos na edificação, minimizando custos e maximizando expansibilidades futuras. Este projeto contemplará o levantamento das plantas física e elaboração da planta logica da rede, e também englobaremos os custos envolvidos em equipamentos que serão implementados neste projeto. }
 
 
 %% ====================================
@@ -157,8 +155,6 @@
 \listoftables
 
 
-
-
 \clearpage
 \renewcommand{\contentsname}{Sumário}
 \tableofcontents
@@ -170,230 +166,321 @@
 %% ====================================
 %% ====================================
 \section{Introdução}
-Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente.
+Atualmente a empresa Fly Security Offensive conta com 30 colaboradores nas seguintes equipes. Administração, Comercial, Consultores, Direção e também os professores e instrutores do centro de treinamentos e consultoria em segurança da informação e redes de computadores. Com o objetivo de expandir o ramo de atuação da empresa, houve a necessidade de um escritório maior para atender melhor seus clientes e também coordenar melhor a operação da empresa.
 
-Indique também nesta seção o escopo do projeto.
+\bigskip
 
-Apresente um overview do parque tecnológico do caso.
+Este projeto tem como objetivo, projetar e instalar uma rede de computadores no modelo LAN - \textit{(Local Area Network)} de alta capacidade no caso \textit{Gigabit Ethernet} e também disponibilizaremos todo o cabeamento para uma rede WLAN - \textit{(Wireless Local Area Network)}. Para criarmos um ambiente redundante para a empresa atualmente o escritório conta com 2 fornecedoras de link de internet fibra óptica assim mantemos a alta disponibilidade e redundância  com operadoras distintas de rede WAN - \textit{(Wire Area Network)}.
+
+\subsection{Escopo do Projeto}
+O escopo abordara o projeto e instalação de todos os componentes passivos da rede como Cabos, Tubulações, Conectores, Racks, Path Panels e demais componentes da rede que não realizam nenhum tipo de tratamento de sinais, tendo apenas a função de ser o meio físico por onde o sinal ira trafegar. Também sera elaborado o orçamento dos equipamento e mão de obra.    
+
+
 \subsection{Benefícios}
-Explique quais seriam os benefícios provenientes após a execução deste projeto.
+Com a padronização e adequação da rede da Fly Security Offensive a empresa terá um ganho de produtividade pois toda a rede terá alta capacidade de transmissão. Outro ponto positivo com o projeto e que não teremos cabeamento telefônico pois toda a rede sera CAT 6 então conseguimos operar com telefonia VoIP sem degradar o tráfego da rede e somente em alguns casos muitos específicos necessitaremos fazer um QoS - \textit{(Quality of Service)}. Outros pontos positivos são.
 
-\subsection{Organizações Envolvidas}
-Coloque o nome de todas as organizações envolvidas. Se for um projeto real, identifique quais as responsabilidades de cada uma das organizações. É comum que em um projeto de redes (cabeamento), temos várias organizações, sendo que cada uma delas com uma determinada responsabilidade.
-
-Sugestão: crie uma tabela contento a relação delas.
-
-
-
-\section{Estado atual}
-Aprente o estado atual da rede. Caso não tenha rede, desconsiderar esta seção.
-
-Caso tenha rede, deixe claro:
 \begin{itemize}
-	\item os passivos de rede atuais:path panels, cabos, etc..;
-	\item as principais reclamações dos usuários. Qual o principal motivo da reestruturação? Efetue uma pesquisa junto aos colaboradores para determinar quais problemas a rede apresenta.
-	\item Observações. Analise a rede e verifique se há estruturas que não se enquadram nas normas ou que indicam suspeita de problemas.
+\item Facilidade de gerenciamento.
+\item Maior ROI - (Retorno Sobre Investimento) para a empresa.
+\item Haverá uma flexibilidade maior em todo o seu sistema. 
+\item Estrtura preparada para expansões.
 \end{itemize}
 
-\section{Requisitos}
-Crie uma enumeração dos requisitos do projeto.
+\subsection{Organizações Envolvidas}
+O projeto sera no modelo fictício, não há nenhuma organização real envolvida. Todos os nomes das empresas são fictícias no caso meramente ilustrativa, abaixo definimos as empresas e profissionais que iram participar da implementação do projeto de cabeamento estruturado para a Fly Security Offensive.
 
-\section{Usuários e Aplicativos}
-Explique nesta seção os usuários atuais e o perfil de crescimento, se por exemplo, há estimativa na evolução da empresa no que tange a quantidade de usuários, pontos de redes, equipamentos.
- 
-
-\subsection{Usuários}
-Crie uma relação da quantidade, perfil de usuários de seu projeto.
-
-\subsection{Aplicativos}
-Crie uma relação dos aplicativos e seus níveis críticos de uso.
-
-
-\section{Estrutura predial existente}
-
-Explique aqui a planta física dos prédios
-Pode ser anexada, em escala ou não.
-
-Deve conter uma descrição geral, indicando a possível distância entre os pontos de rede e restrições de instalação.
-
-\section{Planta Lógica - Elementos estruturados}
-
-\subsection{Estado atual}
-Deve ter a planta atual, se for o caso
-
-\subsection{Topologia}
-Proposta futura, proposta após implantação.
-Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas.
-Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
-
-Todos os elementos das figuras devem ser explicados. 
-Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma tabela contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
+% ---------------------------------------
+% Inicio da Tabela
+% ---------------------------------------
 
 \input{tab1}
 
-\subsection{Encaminhamento}
-Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocados.
+% ---------------------------------------
+%  Final da Tabela
+% ---------------------------------------
 
-\subsection{Memorial descritivo}
+\section{Requisitos}
+Abaixo alguns requisitos do projeto que não fazem parte do espoco acordado entre ambas empresas é serão entregues pelo contrante do projeto e avaliados pelo time técnico da prestadora de serviço, assim podendo dar continuidade ao projeto de cabeamento estruturado.
 
-Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
+\subsection{Provedor de internet - ISP}
+Devera possuir no mínimo 2 links de internet contratados pela empresa, de no mínimo 1 de 200 megabytes e outro de 100 megabytes assim podendo criar uma arquitetura redundante e também confiável.  
 
-\subsection{Identificação dos cabos}
-Explique como os cabos serão identificados em seu projeto. Coloque uma relação dos cabos instalados e identificados.
+\subsection{Estrutura predial}
+A estrutura do prédio devera ter os espaços para as canaletas e tomadas de parede assim podemos trabalhar com o cabeamento horizontal e também o cabeamento backbone.  
 
-\section{Implantação}
-Estabeleça um cronograma de implantação:
-Remoção de equipamentos existentes (destino para descarte), instalação dos condutores, instalação dos cabos, 
-identificação dos cabos, montagem dos racks, certificação, etc... Crie atividades e estabeleça o tempo de execução. Se for um projeto real, indique também quais os responsáveis pela execução do projeto e de cada uma das etapas.
-
-Defina marcas (e padrões) e fornecedores se for o caso. Atenção a contratados e subcontratados para a realização das atividades. Estabeleça a responsabilidade de execução da atividade e também da validação dela.
-
-Utilize algum software para gerear o cronograma. Excel,etc. O fundamental é dividir em etapas, descrever e estimar o tempo de cada uma delas.
-
-Segue uma relação de ferramentas:
-http://asana.com/, 
-https://trello.com/, 
-http://www.ganttproject.biz/, 
-http://www.orangescrum.org/. 
-
-\section{Plano de certificação}
-Quais seriam as etapas para a certificação? 
-Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
-Como os testes seriam executados?
-Quais relatórios de certificação serão (ou deveriam ser) entregues? 
-
-\section{Plano de manutenção}
-
-Revisões periódicas na rede, emissão de certificados para novos pontos.
-
-\subsection{Plano de expansão}
-Existe um plano de expansão? Quantos novos pontos poderão ser acrecidos na rede, antes de migração de equipamentos na camada 2? Se houver expansão, quais equipamentos deverão ser direcionados para as estremidades da rede? 
-
-\section{Risco}
-Enumerar e explicar os riscos do projeto.
-
-\section{Orçamento}
-Crie uma relação de orçamentos baseado na seções anteriores.
-
-\section{Recomendações}
-Observações e recomendações para o cliente.
-
-\section{Referências bibliográficas}
-Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
-
-Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...
-
-Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
-
-
-\renewcommand\refname{} %%Referências bibliográficas}  
-\bibliographystyle{ieeetr}
-\bibliography{referencias}  
-
-%% ***********************************************************************
-%% === remover daqui =====================================================
-%% ***********************************************************************
-=================================================
-\section{Elementos textuais - Alguns exemplos}
-
-Esta seção apresenta exemplos de elementos textuais. \textbf{Remova-a da versão final do texto}.
-
-
-\subsection{Colocar elementos em itens}
-
-Texto antes da lista
-
+\subsection{Rede Elétrica}
+A estrutura elétrica devera ser realizada por parte da empresa contrante atendo os seguintes requisitos.
 \begin{itemize}
-	\item First item in a list 
-	\item Second item in a list 
-	\item Third item in a list
+	\item Aterramento no Backbone de rede.
+	\item Nobreak com alimentação redundante.
+	\item Réguas de energia no rack vindo de nobreaks diferentes.  
 \end{itemize}
+  	 
+\subsection{Equipamentos}
+Os equipamento de camada 3 no caso camada de rede deverão ser todos gigabit assim podendo garantir que todo o trafego de ponta a ponta na rede seja /1000. 
 
-\subsubsection{Uma subseção de terceiro nivel}
+\section{Usuários e Aplicativos}
+O Projeto da empresa Fly Security Offensive visa atender em torno de 30 usuários em um escritório de consultoria e treinamentos. tendo em vista que cada usuário possui um celular e também seu computador temos no minimo 60 dispositivos. Temos também a rede wireless para os clientes.
+ 
 
-Exemplo de uma subseção
+\subsection{Usuários}
+Abaixo temos uma relação em forma de tabela todos os profissionais que atuam junto a empresa, e uma relação das aplicações que os mesmo utilizam no dia a dia de trabalho.
 
-\subsection{Tabelas}
-
-Utilize o site http://www.tablesgenerator.com/ para elaborar as tabelas de seu trabalho.
-Para adicionar uma tabela utilize: a tag input, passando o arquivo da tabela como parametro
+% ---------------------------------------
+% Inicio da Tabela
+% ---------------------------------------
 
 \input{tab2}
 
-Dentro do arquivo você deve definir o label e pode utilizá-lo para referenciar. Exemplo:
-Na tab \ref{tab2} temos a relação de ....
+% ---------------------------------------
+%  Final da Tabela
+% ---------------------------------------
+\pagebreak
 
+\subsection{Aplicativos}
+Nesta seção será descrita a tabela de aplicativos e suas funções criticas no negocio. As aplicações críticas levam na frente um asterisco (*).
 
-Você também pode modificar a tabela manualmente, incluindo, por exemplo h! dentro de sua definição. Veja no exemplo tab2.tex
+% ---------------------------------------
+% Inicio da Tabela
+% ---------------------------------------
 
-\subsection{Figuras}
+\input{tab3}
 
-As figuras podem ser no formato PDF, JPG, PNG. Você pode referenciá-las da mesma maneira que tabelas. Exemplo: A figura \ref{fig1} apresenta.....
+% ---------------------------------------
+%  Final da Tabela
+% ---------------------------------------
 
-Não se preocupe o local em que a figura será renderizada em seu texto. Preocupe-se em criar referência para ela, ou seja, toda figura e tabela deve conter pelo menos uma referência no texto.
+\section{Estrutura predial existente}
+Conforme a planta abaixo, temos um escritório comercial de 8 cômodos não incluindo as áreas de circulação. situado no 16 andar do prédio sendo assim um duplex comercial. Conforme a planta abaixo temos também a localização dos moveis mesas, cadeiras e demais pontos de rede.  
+\bigskip
+Abaixo temos as áreas que serão atendidas pelo cabeamento estruturado totalizando 142.77 metros de área.
+ 
+\begin{itemize}
+	\item Recepção: 12,95 M .
+	\item Sala de reunião: 13,48 M.
+	\item Data Center: 3,49 M.
+	\item Sala 1: 19,14 M.
+	\item Comercial: 20,21 M.
+	\item Suporte Técnico: 38,84 M.
+	\item Coordenação: 12,46 M.
+	\item Café: 6,96 M.
+	\item Sala de Treinamento: 15,24 M.
+	\end{itemize}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{fig1}
-\caption{Exemplo de figura com escala horizontal}
-\label{fig1}
-\end{figure}
+%Inicia Planta baixa tela cheia.
+\clearpage 
+\thispagestyle{plain}
 
-
-\begin{figure}
-	\centering
-	\includegraphics[]{fig2}
-	\caption{Exemplo de figura sem escala}
-	\label{fig2}
-\end{figure}
-
-Você pode rotacionar figuras também. Para isso utilize o parâmetro angle=-90. Repare que a escala da figura foi modificada pelo parametro height. Você também pode utilizar scale
-
-\begin{figure}
-	\centering
-	\includegraphics[height=\textwidth,angle=-90]{fig3}
-	\caption{Exemplo de figura rotacionada}
-	\label{fig3}
-\end{figure}
-
-Você também pode inserir páginas de outro tamanho em seu texto. Isto irá ajudar a inserir imagens maiores, como as desenvolvidas em CAD. Segue um exemplo na figura \ref{fig4}.
-
-
-%inicio dos comandos para criar uma nova pagina A3
-\clearpage
-\KOMAoptions{paper=a3, pagesize}
+\KOMAoptions{paper=a3, paper=landscape, DIV=20}
 \recalctypearea
 
 \begin{figure}
-	\centering
-	\makebox[\textwidth][c]{
-		\includegraphics[height=\textheight]{fig3}}
-	\caption{Exemplo de figura inserida em uma página A3}
-	\label{fig4}
+	%	\centering
+	\noindent\makebox[\textwidth][c]{
+		\includegraphics[width=\textwidth]{plantabaixa}
+	}
+	\caption{Planta Baixa - Fly Security}
+	\label{plantabaixa}
 \end{figure}
 
 %Retornar ao formato A4
 \clearpage
-\KOMAoptions{paper=a4, pagesize}
+\KOMAoptions{paper=a4, paper=portrait, DIV=15}
 \recalctypearea
-%-- reinicio em A4 
+%-- reinicio em A4
 
-\subsubsection{Resumo gráfico}
+\section{Planta Lógica - Elementos estruturados}
 
-Você pode optar por fazer um resumo no formato de mapa mental/conceitual. 
-Aqui foi utilizado o site https://app.mindmup.com para gerar o mapa.
+\subsection{Cabeamento}
 
-Para utilizar o resumo gráfico, remova o texto da seção resumo (linha 137) e inclua o código para inserir a figura, conforme figura \ref{fig5}
+Conforme a figura 2 temos uma noção de como ficara os equipamentos no rack e também na figura 3 temos a  topologia física da rede.
+\\
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth,height=5cm,keepaspectratio]{fig4}
-	\caption{Exemplo de resumo gráfico}
-	\label{fig5}	
+Neste projeto utilizamos a metologia Top-Down esta metodologia é estruturada, no sentido de incluir um projeto lógico de rede antes de abordar o projeto físico e abordar os requisitos antes de tudo.
+
+A metodologia é iterativa. Novos detalhes entram progressivamente no projeto, à medida que se conhece melhor as necessidades. A Metodologia de projeto de redes Top-Down é um processo sistemático de criação de redes que tem seu foco nos aplicativos, nas metas técnicas e na finalidade dos negócios de uma organização.
+
+\begin{figure}[H]
+	%	\centering
+	\noindent\makebox[\textwidth][c]{
+		\includegraphics[width=\textwidth]{tprack}
+	}
+	\caption{Topologia Rack - Fly Security}
+	\label{tprack}
 \end{figure}
 
-%% ***********************************************************************
-%% === ate aqui    =====  ================================================
-%% ***********************************************************************
+\begin{itemize}
+	\item Rede Local: Azul.
+	\item Rede Fibra: Amarelo. 
+	\item Rede Trunk: Vermelho. 
+	\item Rede WAN:   Laranja.
+\end{itemize}
 
+%Inicio Topologia Fisica tela cheia.
+\clearpage 
+\thispagestyle{plain}
+
+\KOMAoptions{paper=a3, paper=landscape, DIV=20}
+\recalctypearea
+
+\begin{figure}
+	%	\centering
+	\noindent\makebox[\textwidth][c]{
+		\includegraphics[width=\textwidth]{tpfisica}
+	}
+	\caption{Topologia Física - Fly Security}
+	\label{tpfisica}
+\end{figure}
+
+%Retornar ao formato A4
+\clearpage
+\KOMAoptions{paper=a4, paper=portrait, DIV=15}
+\recalctypearea
+%-- reinicio em A4
+
+\subsection{Topologia}
+
+Conforme ja apresentado as topologias acima neste caso optamos por utilizar um rack fechado é um modelo mais robusto, já que é todo fechado, dificultando o acesso irrestrito e a deterioração por ação de agentes externos, como umidade, poeira etc. Além disso, o rack fechado tem a vantagem de se poder realizar o controle de circulação de ar interna, melhorando a dinâmica da temperatura dos equipamentos nele instalados — fator de extrema relevância para a operação da infraestrutura.
+\\
+
+Conforme a metologia Top-Down os dois links dos provedores - ISP chegaram em um DIO - (Distribuidor Interno Óptico) de fibra óptica assim facilitando o futuro gerenciamento da rede. 
+\\
+
+Conforme as topologias apresentas acima temos dois links de internet que chegaram no equipamento, Mikrotik CCR na porta SFP+ 1 é SFP+ 2 realizaremos a distribuição da seguinte forma.
+\\
+
+Porta ETH1 da CCR será destinada a rede cabeada da empresa que encontrasse em uma VLAN diferente da rede wireless por questões de segurança.
+\\
+ 
+Será projetado duas redes wireless uma para funcionários e uma para visitantes que terá o trafego limitado em 5Mb e será solicitado cadastro que vai ser armazenado no radius da própria CCR.
+\\
+
+Porta ETH2 da CCR será destinada ao ambiente wireless que está conectado diretamente à porta 24 do switch PoE.  
+
+\subsection{Encaminhamento}
+Neste projeto, serão instalados eletrocalhas no gesso, a eletrocalha é uma espécie de tudo metálico e rígido. Sua função é dar suporte à passagem de fios e cabos elétricos, de telefonia ou informática. Geralmente é um item que fica embutido no forro, mas sua instalação também pode ser feita de forma aparente: geralmente pendurada no teto com o auxílio de suportes.
+\\
+
+Utilizaremos eletrocalhas de PVC não o modelo metálico pois corrosão é um problema que pode levar à redução de desempenho e alteração da vida útil da instalação, pois esses materiais normalmente estão expostos à corrosão atmosférica, por isso o ambiente em que o material será utilizado é um dos principais critérios para a escolha do acabamento superficial ou do tipo de aço.
+
+\subsection{Memorial descritivo}
+
+		Abaixo temos em forma de tabela a relação dos equipamentos passivos que serão utilizados neste projeto, e também informaremos a quantidade de cada produto e também o fabricante recomendado.
+\\
+
+Como nosso objetivo e garantir a qualidade dos produtos e do projeto so trabalhamos com produtos da Furukawa.
+
+% ---------------------------------------
+% Inicio da Tabela
+% ---------------------------------------
+
+\input{tab4}
+
+% ---------------------------------------
+%  Final da Tabela
+% ---------------------------------------
+
+
+\subsection{Identificação dos cabos}
+Os cabos serão identificados da seguinte forma:
+\\
+
+\textbf{ISP} = Cabos que vem do DIO e vão ate o roteador seguindo do nome do provedor.
+\\
+
+\textbf{Trunk} = Cabos que fazem a ligação do roteador ao switch.
+\\
+
+\textbf{AP} = Cabos que saem diretamente do switch PoE e vão para o AP seguido do numero do AP.
+\\
+
+\textbf{PDR} = Patch cord que liga as maquinas ao patch panel localizado no data center.
+\\
+
+\textbf{PC} = Patch cord que liga as maquinas, a tomada na parade seguido do numero do desktop.
+\\
+
+
+\section{Implantação}
+Abaixo temos o cronograma de implantação compartilhado com o cliente. O cronograma segue os prazos estabelecidos abaixo, conforme defino com o cliente.
+
+\begin{figure}[H]
+	%	\centering
+	\noindent\makebox[\textwidth][c]{
+		\includegraphics[width=\textwidth]{cronograma}
+	}
+	\caption{Cronograma Projeto - Fly Security}
+	\label{tprack}
+\end{figure}
+
+\section{Plano de certificação}
+A certificação da rede e infraestrutura devera ser realizada com os colaborares responsáveis pela parte técnica da empresa que acompanharam o procedimento de implantação, após o procedimento de implantação devidamente concluído e com o status operante.
+\\
+
+A participação no plano de certificação garante a entrega do resultado esperado com margem de erros aceitáveis para trabalhar em ações internas previamente realizadas antes mesmo que imprevistos ocorram de fato o que dependendo da situação poderá ocasionar problemas graves para a empresa contratante. Assim com planos de contingencia e treinamentos referente aos equipamentos instalados a margem de erro diminui drasticamente  reduzindo ainda mais os  empecilho que poderão ocorrer. 
+
+
+\section{Plano de manutenção}
+Caberá a equipe de TI, averiguar os status dos equipamentos se estão em pleno funcionamento, executar teste de velocidade de link de internet, testes dos equipamentos de rede. Caso alguma anomalia notada uma breve analise deverá ser realizada e informada ao nós para darmos os primeiros atendimentos e executar as providencias que devem ser tomadas.
+\\
+
+Como boas praticas, a equipe de TI, deverá gerar relatórios mensais referente ao trafego realizado internamente juntamente com os relatórios de status dos esquipamentos instalados com o objetivo de aperfeiçoarmos e otimizarmos a infraestrutura já instalada, assim prevenindo tentativas de acesso indevido de funcionários e terceiros ou até mesmo ataques externos.
+
+
+\subsection{Plano de expansão}
+Neste projeto de baixa complexidade, já esta considerado o esgotamento de recurso em termos de cabeamento, a necessidade de novos equipamentos como Switch e Path panel e canaletas por exemplo. Para expandir os pontos existentes, pode-se adotar a seguinte estratégia:
+\begin{itemize}
+	\item Patch Panel 48 Portas CAT 6.
+	\item Organizador 1 U.
+	\item Patch Cord CAT 6. 
+	\item Cabo UTP CAT 6 450 m
+\end{itemize}
+
+\section{Risco}
+O projeto demanda diretamente de um condicionamento de ar em um cômodo reservado, porem há a risco de interferência de eletromagnética.
+Portanto recomenda-se de que os cabos de rede fiquem mais de 30 cm de distância da rede ou cabos que conduzem energia. A norma estabelece o mínimo de 30 cm de distância dessas linhas, pois os eletromagnetismo provindos desses cabos podem gerar ruídos na rede. Salvo desta norma cabos e conectores blindado, no entanto com a instalação dos mesmos não é apropriado devido ao custo destes cabos serem extremamente elevado, podendo tal valor ser mais compensador gastos com passagem de uma única fibra ótica e a instalação de seus conversores de mídia. A fibra ótica não captura nenhuma interferência de eletricidade. Mais detalhes referentes o cancelamento de eletro magnetismo na seção Recomendações.
+
+\section{Orçamento}
+Abaixo temos a tabela de custo dos equipamentos passivos que serão utilizados neste projeto. Não esta incluso a mão de obra neste orçamento. 
+
+Fica estabelecido que:
+\begin{itemize}
+\item As partes concordam em não permitir alteração de escopo desta proposta após a sua aprovação e assinatura, ficando acordado desde já que tais mudanças, quando necessárias, acarretarão em uma nova proposta a ser elaborada pela AllSafe of Networks to Cabling, onde a mesma contemplará o novo orçamento;
+
+\item As condições estabelecidas nesta proposta comercial são fornecidas tendo como base as informações disponibilizadas pelo cliente. Neste sentido, caso haja necessidade de alteração no projeto, para fins de adequação do mesmo ao escopo ideal, as condições ora oferecidas poderão ser revistas;
+
+\item Valores sujeitos à alteração, sem aviso prévio, correspondentes a configuração dos equipamentos ,serviços de instalação e garantias constantes nesta proposta;
+
+\end{itemize}
+% ---------------------------------------
+% Inicio da Tabela
+% ---------------------------------------
+
+\input{tab5}
+
+% ---------------------------------------
+%  Final da Tabela
+% ---------------------------------------
+
+\section{Recomendações}
+Abaixo segue as observações e recomendações para o cliente.
+
+\subsection{Cancelamento do eletromagnetismo}
+Quando cargas elétricas se deslocam pelo espaço, se associam a um campo elétrico e a outro campo magnético, sendo que esses têm linhas de força perpendiculares entre si e são interdependentes. Chamamos de campo eletromagnético um fenômeno que envolve os campos elétrico e magnético variando no decorrer do tempo. É uma concentração de cargas elétricas e magnéticas que se movimentam como ondas.  Muita das vezes, especialistas técnicos em eletrônica, não possuem o conhecimento referente ao cancelamento do electromagnetismo gerado por fios de cobre. Quando colocamos cabos que possuem alta taxa de transferência de dados perto de equipamentos de energia, isso pode causar interferência e atenuações do sinal de rede prejudicando a experiencia, por isso recomendamos que os equipamentos como no-break fique com uma distancia minima de 30cm de distancia dos equipamentos de rede e caso não exista a possibilidade que seja necessário o uso de eletrocalha. Lembrando que esta interferência não influencia nos equipamentos de fibra óptica.
+
+\subsection{Aterramento}
+O “terra” é um conector que possui valor igual a zero Volt absoluto, ou seja, seu valor não se altera, diferentemente do neutro. Dessa forma, ele é o responsável por eliminar a “sujeira” elétrica dos componentes, pois toda carga eletrostática acumulada neles é descarregada para a terra. Este sistema é bem simples, consiste em uma viga cravada na terra que é conectado a um fio, geralmente da cor verde e amarela, que percorre toda a construção, com o objetivo de diminuir a variação da tensão de uma rede elétrica, eliminar as fugas de energia e proteger os usuários de um possível choque elétrico.
+
+\subsection{Equipamentos que podem causar danos}
+O estabilizador é o equipamento é responsável pela conexão de aparelhos eletrônicos a tomadas na casa dos brasileiros há décadas, antes mesmo de existirem os computadores pessoais. Isso acontece porque, desde os idos de 1940, o Brasil sofre com a instabilidade na tensão das redes elétricas, o que pode causar problemas sérios aos aparelhos eletrônicos. Promete-se aos usuários, que os dispositivos serão os principais responsáveis pelo nivelamento da tensão elétrica da rede. Com isso, picos de energia não afetariam diretamente os aparelhos. Teoricamente, sempre que a rede elétrica sobe de tensão, os estabilizadores entram em ação para regular a voltagem aplicada a cada aparelho e evitar que eles sejam queimados. Quando a rede baixa sua tensão, o processo ocorre de maneira inversa: ele é utilizado para aumentar a tensão e não deixar que os eletrônicos sejam desligados. Segundo o Departamento de Eletrotécnica da Universidade Tecnológica Federal do Paraná, tem informações que comprovam a ineficácia dos estabilizadores em redes domésticas no Brasil. Atualmente, com o desenvolvimento de fontes de alimentação universais que atuam automaticamente em redes de 127 V ou 220 V, o uso de estabilizadores é desnecessário. Estabilizadores não têm capacidade para atuar na qualidade da energia elétrica, por isso, as redes com altos níveis de poluição não têm suas tensões corrigidas, portanto não recomendados o seu uso. 
+
+\subsection{Manutenção da energia em caso de queda}
+Para equipamentos que precisem de alta disponibilidade em caso de queda de energia, o recomendado é o uso de no-break do tipo on-line de dupla conversão, que seria responsável pela entrega de senoidal. O no-break Senoidal é um equipamento de fornecimento de energia que equaliza e equilibra as ondas em seu formato mais puro (senoidal) padronizando o fornecimento de energia a fim de garantir a segurança e o funcionamento correto de aparelhos mais sensíveis como, por exemplo, aqueles utilizados na área hospitalar e médica.
+
+\pagebreak
+\section{Referências bibliográficas}
+
+\renewcommand\refname{} %%Referências bibliográficas}  
+\bibliographystyle{ieeetr}
+\bibliography{referencias}    
 \end{document}
