@@ -15,5 +15,9 @@ Padronização de instalação, utilizando cabeamento estruturado, é uma forma 
 
 * Fornecer uma solução de arquitetura de segurança totalmente open source de forma escalável e dinâmica.
 
+# Topologia padrão.
+
+![preview](/img/Structured.png)
+
 # Licença 
 Este projeto é lançado sob a [MIT license](LICENSE.txt).
