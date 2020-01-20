@@ -13,9 +13,11 @@ Padronização de instalação, utilizando cabeamento estruturado, é uma forma 
 
 # Objetivos Especificos 
 
-* Fornecer uma solução de arquitetura de segurança totalmente open source de forma escalável e dinâmica.
+* Elaboracao de um projeto de cabeamento estruturado do zero.
+* 
 
 # Topologia padrão.
+Abaixo temos a estrutura de cabeamento estruturado seguido como boas práticas de projeto. 
 
 ![preview](/img/Structured.png)
 
